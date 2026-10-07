@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffc928">
+  <title>QR Alert — Training Checkpoint</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      display: grid;
+      min-height: 100vh;
+      margin: 0;
+      padding: 24px;
+      place-items: center;
+      background: #fff4cc;
+      color: #202020;
+      font-family: Arial, sans-serif;
+    }
+
+    main {
+      width: min(100%, 660px);
+      overflow: hidden;
+      border: 3px solid #202020;
+      border-radius: 12px;
+      background: #fffdf5;
+      box-shadow: 8px 8px 0 #202020;
+    }
+
+    .hazard-stripe {
+      height: 18px;
+      background: repeating-linear-gradient(
+        135deg,
+        #202020 0,
+        #202020 16px,
+        #ffc928 16px,
+        #ffc928 32px
+      );
+    }
+
+    .content {
+      padding: 36px;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 9px 14px;
+      border: 2px solid #202020;
+      border-radius: 4px;
+      background: #ffc928;
+      color: #202020;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+    }
+
+    .icon {
+      display: grid;
+      width: 88px;
+      height: 88px;
+      margin: 22px auto 16px;
+      place-items: center;
+      border: 4px solid #202020;
+      border-radius: 50%;
+      background: #ffc928;
+      font-size: 44px;
+    }
+
+    h1 {
+      margin: 8px 0 12px;
+      font-size: clamp(28px, 6vw, 38px);
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+    }
+
+    .intro {
+      max-width: 490px;
+      margin: 0 auto;
+      color: #454545;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    .game-result {
+      margin: 26px 0;
+      padding: 18px;
+      border: 2px solid #202020;
+      border-left: 10px solid #e55325;
+      border-radius: 6px;
+      background: #fff0df;
+      color: #29211c;
+      font-size: 17px;
+      font-weight: 800;
+    }
+
+    .game-result span {
+      display: block;
+      margin-top: 6px;
+      color: #55483f;
+      font-size: 13px;
+      font-weight: normal;
+      line-height: 1.5;
+    }
+
+    .lesson {
+      padding: 22px;
+      border: 2px solid #202020;
+      border-radius: 6px;
+      background: #fff8dc;
+      text-align: left;
+    }
+
+    .lesson h2 {
+      margin: 0 0 14px;
+      font-size: 19px;
+      text-transform: uppercase;
+    }
+
+    .lesson ol {
+      margin: 0;
+      padding-left: 24px;
+      color: #353535;
+      line-height: 1.8;
+    }
+
+    .lesson li {
+      padding-left: 4px;
+    }
+
+    .closing {
+      margin: 22px 0 0;
+      color: #454545;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    footer {
+      padding: 16px 22px;
+      border-top: 3px solid #202020;
+      background: #ffc928;
+      color: #202020;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .footer-stripe {
+      height: 10px;
+      background: repeating-linear-gradient(
+        135deg,
+        #202020 0,
+        #202020 10px,
+        #ffc928 10px,
+        #ffc928 20px
+      );
+    }
+
+    @media (max-width: 500px) {
+      body {
+        padding: 14px;
+      }
+
+      main {
+        box-shadow: 5px 5px 0 #202020;
+      }
+
+      .content {
+        padding: 28px 20px;
+      }
+
+      .lesson {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="hazard-stripe" aria-hidden="true"></div>
+
+    <section class="content">
+      <div class="badge">⚠ QR SAFETY CHECKPOINT ⚠</div>
+
+      <div class="icon" role="img" aria-label="Warning">⚠️</div>
+
+      <h1>Pause! QR check.</h1>
+
+      <p class="intro">
+        You scanned the code in a practice email. This was a training
+        simulation—not a real benefits page. Let’s turn that scan into a
+        useful safety check.
+      </p>
+
+      <div class="game-result">
+        🚧 Checkpoint reached: QR awareness
+        <span>No points lost and no penalty—this is a chance to practice.</span>
+      </div>
+
+      <section class="lesson" aria-labelledby="lesson-title">
+        <h2 id="lesson-title">Before you scan, check:</h2>
+        <ol>
+          <li>Were you expecting this message?</li>
+          <li>Does the sender and request make sense?</li>
+          <li>Can you preview the destination before opening it?</li>
+          <li>If anything feels off, report it through your usual process.</li>
+        </ol>
+      </section>
+
+      <p class="closing">
+        QR codes can conceal their destination. Be extra careful if a link asks
+        you to sign in or share information.
+      </p>
+    </section>
+
+    <footer>
+      Authorized training simulation · No credentials or personal information
+      were requested or collected.
+    </footer>
+
+    <div class="footer-stripe" aria-hidden="true"></div>
+  </main>
+</body>
+</html>
